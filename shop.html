@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="shop.css">
+		<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js" ></script>
+	</head>
+	<body>
+		<div style="width: 100%;" id="shopclothe">
+
+			<div class="pic" style="float: left; display: inline;">
+				<button class="imgbutt" v-on:click="showpic('pic1')" ><img src="./picshop/exam1.jpg" alt="childdress" class="imageclass" ></button>
+				<button class="imgbutt" v-on:click="showpic('pic2')" ><img src="./picshop/exam2.jpg" alt="childdress" class="imageclass" ></button>
+				<button class="imgbutt" v-on:click="showpic('pic3')" ><img src="./picshop/exam3.jpg" alt="childdress" class="imageclass" ></button>
+				<button class="imgbutt" v-on:click="showpic('pic4')" ><img src="./picshop/exam4.jpg" alt="childdress" class="imageclass" ></button>
+				<button class="imgbutt" v-on:click="showpic('pic5')" ><img src="./picshop/exam5.jpg" alt="childdress" class="imageclass" ></button>
+				<button class="imgbutt" v-on:click="showpic('pic6')" ><img src="./picshop/exam6.jpg" alt="childdress" class="imageclass" ></button>
+			</div>
+			<div class="specif" style="float: right;">
+				<img class="showimage" :src="currectimage" v-if="currectimage" >
+				<div class="infdress" v-if="currectimage === './picshop/exam1.jpg'">
+					<h1>Size: <span style=" font-weight: lighter;">34</span></h1>
+					<h1>Height: <span style=" font-weight: lighter;">134</span></h1>
+					<h1>Price: <span style=" font-weight: lighter;">1340$</span></h1>
+				</div>
+				<div class="infdress"  v-if="currectimage === './picshop/exam2.jpg'">
+					<h1>Size: <span style=" font-weight: lighter;">32</span></h1>
+					<h1>Height: <span style=" font-weight: lighter;">130</span></h1>
+					<h1>Price: <span style=" font-weight: lighter;">1140$</span></h1>
+				</div>
+				<div class="infdress"  v-if="currectimage === './picshop/exam3.jpg'">
+					<h1>Size: <span style=" font-weight: lighter;">34</span></h1>
+					<h1>Height: <span style=" font-weight: lighter;">104</span></h1>
+					<h1>Price: <span style=" font-weight: lighter;">1300$</span></h1>
+				</div>
+				<div class="infdress"  v-if="currectimage === './picshop/exam4.jpg'">
+					<h1>Size: <span style=" font-weight: lighter;">36</span></h1>
+					<h1>Height: <span style=" font-weight: lighter;">140</span></h1>
+					<h1>Price: <span style=" font-weight: lighter;">2000$</span></h1>
+				</div>
+				<div class="infdress"  v-if="currectimage === './picshop/exam5.jpg'">
+					<h1>Size: <span style=" font-weight: lighter;">32</span></h1>
+					<h1>Height: <span style=" font-weight: lighter;">150</span></h1>
+					<h1>Price: <span style=" font-weight: lighter;">1500$</span></h1>
+				</div>
+				<div class="infdress"  v-if="currectimage === './picshop/exam6.jpg'">
+					<h1>Size: <span style=" font-weight: lighter;">34</span></h1>
+					<h1>Height: <span style=" font-weight: lighter;">150</span></h1>
+					<h1>Price: <span style=" font-weight: lighter;">1650$</span></h1>
+				</div>
+			</div>
+		</div>
+		<script src="shop.js"></script>
+	</body>
+</html>
